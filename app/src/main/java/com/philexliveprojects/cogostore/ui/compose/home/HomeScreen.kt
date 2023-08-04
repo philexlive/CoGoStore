@@ -13,8 +13,7 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import com.philexliveprojects.cogostore.R
-import com.philexliveprojects.cogostore.ui.compose.CoGoStoreAppBar
-import kotlinx.coroutines.launch
+import com.philexliveprojects.cogostore.ui.compose.utils.CoGoStoreAppBar
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
