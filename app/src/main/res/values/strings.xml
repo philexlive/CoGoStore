@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">CoGoStore</string>
     <string name="menu">Menu</string>
+    <string name="home">Home</string>
+    <string name="wishlist">Wishlist</string>
+    <string name="bag">Bag</string>
+    <string name="offers">Offers</string>
+    <string name="help">Help</string>
+    <string name="terms_and_policy"><![CDATA[Terms & Policy]]></string>
+    <string name="login">Login</string>
 </resources>
