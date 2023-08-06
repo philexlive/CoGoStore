@@ -8,4 +8,5 @@
     <string name="help">Help</string>
     <string name="terms_and_policy"><![CDATA[Terms & Policy]]></string>
     <string name="login">Login</string>
+    <string name="back_to_home">Back To Home</string>
 </resources>

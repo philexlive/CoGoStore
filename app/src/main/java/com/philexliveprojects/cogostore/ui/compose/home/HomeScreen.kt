@@ -24,9 +24,14 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.philexliveprojects.cogostore.R
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HomeScreen(onMenu: () -> Unit) {
+    HomeScreenContent(onMenu)
+}
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun HomeScreenContent(onMenu: () -> Unit = {}) {
     Scaffold(
         topBar = {
             CoGoStoreAppBar(
