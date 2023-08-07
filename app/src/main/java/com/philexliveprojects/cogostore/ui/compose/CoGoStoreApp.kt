@@ -34,7 +34,7 @@ private fun CoGoStoreAppContent() {
     val coroutineScope = rememberCoroutineScope()
 
     val navBackStackEntry by navController.currentBackStackEntryAsState()
-    val currentRoute = navBackStackEntry?.destination?.route ?: CoGoStoreDestination.HOME
+    val currentRoute = navBackStackEntry?.destination?.route ?: CoGoStoreDestination.Home.route
 
     val navDrawerState = rememberDrawerState(initialValue = DrawerValue.Closed)
 

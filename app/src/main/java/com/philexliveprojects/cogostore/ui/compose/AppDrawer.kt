@@ -29,12 +29,6 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.philexliveprojects.cogostore.R
-import com.philexliveprojects.cogostore.ui.compose.CoGoStoreDestination.BAG
-import com.philexliveprojects.cogostore.ui.compose.CoGoStoreDestination.HELP
-import com.philexliveprojects.cogostore.ui.compose.CoGoStoreDestination.HOME
-import com.philexliveprojects.cogostore.ui.compose.CoGoStoreDestination.OFFERS
-import com.philexliveprojects.cogostore.ui.compose.CoGoStoreDestination.TERMS_AND_POLICY
-import com.philexliveprojects.cogostore.ui.compose.CoGoStoreDestination.WISHLIST
 import com.philexliveprojects.cogostore.ui.theme.CoGoStoreTheme
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -62,38 +56,38 @@ fun AppDrawer(
             )
         }
         NavigationDrawerItem(
-            label = { Text(stringResource(R.string.home)) },
-            selected = currentRoute == HOME,
+            label = { Text(stringResource(CoGoStoreDestination.Home.title)) },
+            selected = currentRoute == CoGoStoreDestination.Home.route,
             onClick = { navigateToHome(); closeDrawer() },
             modifier = drawerItemModifier
         )
         NavigationDrawerItem(
-            label = { Text(stringResource(R.string.wishlist)) },
-            selected = currentRoute == WISHLIST,
+            label = { Text(stringResource(CoGoStoreDestination.Wishlist.title)) },
+            selected = currentRoute == CoGoStoreDestination.Wishlist.route,
             onClick = { navigateToWishList(); closeDrawer() },
             modifier = drawerItemModifier
         )
         NavigationDrawerItem(
-            label = { Text(stringResource(R.string.bag)) },
-            selected = currentRoute == BAG,
+            label = { Text(stringResource(CoGoStoreDestination.Bag.title)) },
+            selected = currentRoute == CoGoStoreDestination.Bag.route,
             onClick = { navigateToBag(); closeDrawer() },
             modifier = drawerItemModifier
         )
         NavigationDrawerItem(
-            label = { Text(stringResource(R.string.offers)) },
-            selected = currentRoute == OFFERS,
+            label = { Text(stringResource(CoGoStoreDestination.Offers.title)) },
+            selected = currentRoute == CoGoStoreDestination.Offers.route,
             onClick = { navigateToOffers(); closeDrawer() },
             modifier = drawerItemModifier
         )
         NavigationDrawerItem(
-            label = { Text(stringResource(R.string.help)) },
-            selected = currentRoute == HELP,
+            label = { Text(stringResource(CoGoStoreDestination.Help.title)) },
+            selected = currentRoute == CoGoStoreDestination.Help.route,
             onClick = { navigateToHelp(); closeDrawer() },
             modifier = drawerItemModifier
         )
         NavigationDrawerItem(
-            label = { Text(stringResource(R.string.terms_and_policy)) },
-            selected = currentRoute == TERMS_AND_POLICY,
+            label = { Text(stringResource(CoGoStoreDestination.TermsAndPolicy.title)) },
+            selected = currentRoute == CoGoStoreDestination.TermsAndPolicy.route,
             onClick = { navigateToTermsAndPolicy(); closeDrawer() },
             modifier = drawerItemModifier
         )

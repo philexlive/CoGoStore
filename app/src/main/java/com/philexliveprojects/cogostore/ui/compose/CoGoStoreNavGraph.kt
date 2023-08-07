@@ -5,12 +5,6 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.philexliveprojects.cogostore.ui.compose.CoGoStoreDestination.BAG
-import com.philexliveprojects.cogostore.ui.compose.CoGoStoreDestination.HELP
-import com.philexliveprojects.cogostore.ui.compose.CoGoStoreDestination.HOME
-import com.philexliveprojects.cogostore.ui.compose.CoGoStoreDestination.OFFERS
-import com.philexliveprojects.cogostore.ui.compose.CoGoStoreDestination.TERMS_AND_POLICY
-import com.philexliveprojects.cogostore.ui.compose.CoGoStoreDestination.WISHLIST
 import com.philexliveprojects.cogostore.ui.compose.bag.BagScreen
 import com.philexliveprojects.cogostore.ui.compose.help.HelpScreen
 import com.philexliveprojects.cogostore.ui.compose.home.HomeScreen
@@ -22,30 +16,30 @@ import com.philexliveprojects.cogostore.ui.compose.wishlist.WishlistScreen
 fun CoGoStoreNavGraph(
     navController: NavHostController = rememberNavController(),
     openDrawer: () -> Unit = {},
-    startDestination: String = CoGoStoreDestination.HOME
+    startDestination: String = CoGoStoreDestination.Home.route
 ) {
     NavHost(navController = navController, startDestination = startDestination) {
-        composable(HOME) {
+        composable(CoGoStoreDestination.Home.route) {
             HomeScreen(openDrawer)
         }
 
-        composable(WISHLIST) {
+        composable(CoGoStoreDestination.Wishlist.route) {
             WishlistScreen(onBack = { navController.navigateUp() })
         }
 
-        composable(BAG) {
+        composable(CoGoStoreDestination.Bag.route) {
             BagScreen(onBack = { navController.navigateUp() })
         }
 
-        composable(OFFERS) {
+        composable(CoGoStoreDestination.Offers.route) {
             OffersScreen(onBack = { navController.navigateUp() })
         }
 
-        composable(HELP) {
+        composable(CoGoStoreDestination.Help.route) {
             HelpScreen(onBack = { navController.navigateUp() })
         }
 
-        composable(TERMS_AND_POLICY) {
+        composable(CoGoStoreDestination.TermsAndPolicy.route) {
             TermsAndPolicyScreen(onBack = { navController.navigateUp() })
         }
     }

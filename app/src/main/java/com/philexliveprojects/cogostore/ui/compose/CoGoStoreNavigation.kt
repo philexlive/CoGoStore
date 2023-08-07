@@ -1,24 +1,23 @@
 package com.philexliveprojects.cogostore.ui.compose
 
+import androidx.annotation.StringRes
 import androidx.navigation.NavController
 import androidx.navigation.NavGraph.Companion.findStartDestination
+import com.philexliveprojects.cogostore.R
 
 /**
  * Navigation destinations constants
  */
-object CoGoStoreDestination {
-    const val HOME = "home"
-    const val WISHLIST = "wishlist"
-    const val BAG = "bag"
-    const val HIT = "hit"
-    const val OFFERS = "offers"
-    const val CATEGORY = "category"
-    const val PRODUCT = "product"
-    const val PURCHASE = "purchase"
-    const val SEARCH = "search"
-    const val USER = "user"
-    const val HELP = "help"
-    const val TERMS_AND_POLICY = "terms_and_policy"
+enum class CoGoStoreDestination(
+    @StringRes val title: Int,
+    val route: String
+) {
+    Home(R.string.home, "home"),
+    Wishlist(R.string.wishlist, "wishlist"),
+    Bag(R.string.bag, "bag"),
+    Offers(R.string.offers, "offers"),
+    Help(R.string.help, "help"),
+    TermsAndPolicy(R.string.terms_and_policy, "terms_and_policy"),
 }
 
 /**
@@ -28,19 +27,13 @@ class CoGoStoreNavigationActions(navController: NavController) {
     /*
     Navigation lambda functions
      */
-    val navigateToHome = { navigateTo(navController, CoGoStoreDestination.HOME) }
-    val navigateToWishList = { navigateTo(navController, CoGoStoreDestination.WISHLIST) }
-    val navigateToBag = { navigateTo(navController, CoGoStoreDestination.BAG) }
-    val navigateToHit = { navigateTo(navController, CoGoStoreDestination.HIT) }
-    val navigateToOffers = { navigateTo(navController, CoGoStoreDestination.OFFERS) }
-    val navigateToCategory = { navigateTo(navController, CoGoStoreDestination.CATEGORY) }
-    val navigateToProduct = { navigateTo(navController, CoGoStoreDestination.PRODUCT) }
-    val navigateToPurchase = { navigateTo(navController, CoGoStoreDestination.PURCHASE) }
-    val navigateToSearch = { navigateTo(navController, CoGoStoreDestination.SEARCH) }
-    val navigateToUser = { navigateTo(navController, CoGoStoreDestination.USER) }
-    val navigateToHelp = { navigateTo(navController, CoGoStoreDestination.HELP) }
+    val navigateToHome = { navigateTo(navController, CoGoStoreDestination.Home.route) }
+    val navigateToWishList = { navigateTo(navController, CoGoStoreDestination.Wishlist.route) }
+    val navigateToBag = { navigateTo(navController, CoGoStoreDestination.Bag.route) }
+    val navigateToOffers = { navigateTo(navController, CoGoStoreDestination.Offers.route) }
+    val navigateToHelp = { navigateTo(navController, CoGoStoreDestination.Help.route) }
     val navigateToTermsAndPolicy =
-        { navigateTo(navController, CoGoStoreDestination.TERMS_AND_POLICY) }
+        { navigateTo(navController, CoGoStoreDestination.TermsAndPolicy.route) }
 
     /*
     Common navigation function
