@@ -8,36 +8,38 @@ import com.philexliveprojects.cogostore.R
 /**
  * Navigation destinations constants
  */
-enum class CoGoStoreDestination(
-    @StringRes val title: Int,
-    val route: String
-) {
-    Home(R.string.home, "home"),
-    Wishlist(R.string.wishlist, "wishlist"),
-    Bag(R.string.bag, "bag"),
-    Offers(R.string.offers, "offers"),
-    Help(R.string.help, "help"),
-    TermsAndPolicy(R.string.terms_and_policy, "terms_and_policy"),
+enum class CoGoStoreDestination(@StringRes val title: Int) {
+    Home(R.string.home),
+    Wishlist(R.string.wishlist),
+    Bag(R.string.bag),
+    Offers(R.string.offers),
+    Help(R.string.help),
+    TermsAndPolicy(R.string.terms_and_policy),
 }
 
 /**
- * Navigation actions
- */
+ * Class for to handle navigation.
+ * CoGoStoreDestination.<Page>.name represents a concrete route for the page.
+ * */
 class CoGoStoreNavigationActions(navController: NavController) {
-    /*
-    Navigation lambda functions
-     */
-    val navigateToHome = { navigateTo(navController, CoGoStoreDestination.Home.route) }
-    val navigateToWishList = { navigateTo(navController, CoGoStoreDestination.Wishlist.route) }
-    val navigateToBag = { navigateTo(navController, CoGoStoreDestination.Bag.route) }
-    val navigateToOffers = { navigateTo(navController, CoGoStoreDestination.Offers.route) }
-    val navigateToHelp = { navigateTo(navController, CoGoStoreDestination.Help.route) }
-    val navigateToTermsAndPolicy =
-        { navigateTo(navController, CoGoStoreDestination.TermsAndPolicy.route) }
+    /* Navigation lambda functions */
 
-    /*
-    Common navigation function
-     */
+    val navigateToHome = { navigateTo(navController, CoGoStoreDestination.Home.name) }
+
+    val navigateToWishList = { navigateTo(navController, CoGoStoreDestination.Wishlist.name) }
+
+    val navigateToBag = { navigateTo(navController, CoGoStoreDestination.Bag.name) }
+
+    val navigateToOffers = { navigateTo(navController, CoGoStoreDestination.Offers.name) }
+
+    val navigateToHelp = { navigateTo(navController, CoGoStoreDestination.Help.name) }
+
+    val navigateToTermsAndPolicy =
+        { navigateTo(navController, CoGoStoreDestination.TermsAndPolicy.name) }
+
+    /**
+     * Function to navigate to the destination.
+     * */
     private fun navigateTo(navController: NavController, destination: String) {
         navController.navigate(destination) {
             popUpTo(navController.graph.findStartDestination().id) {

@@ -57,37 +57,37 @@ fun AppDrawer(
         }
         NavigationDrawerItem(
             label = { Text(stringResource(CoGoStoreDestination.Home.title)) },
-            selected = currentRoute == CoGoStoreDestination.Home.route,
+            selected = currentRoute == CoGoStoreDestination.Home.name,
             onClick = { navigateToHome(); closeDrawer() },
             modifier = drawerItemModifier
         )
         NavigationDrawerItem(
             label = { Text(stringResource(CoGoStoreDestination.Wishlist.title)) },
-            selected = currentRoute == CoGoStoreDestination.Wishlist.route,
+            selected = currentRoute == CoGoStoreDestination.Wishlist.name,
             onClick = { navigateToWishList(); closeDrawer() },
             modifier = drawerItemModifier
         )
         NavigationDrawerItem(
             label = { Text(stringResource(CoGoStoreDestination.Bag.title)) },
-            selected = currentRoute == CoGoStoreDestination.Bag.route,
+            selected = currentRoute == CoGoStoreDestination.Bag.name,
             onClick = { navigateToBag(); closeDrawer() },
             modifier = drawerItemModifier
         )
         NavigationDrawerItem(
             label = { Text(stringResource(CoGoStoreDestination.Offers.title)) },
-            selected = currentRoute == CoGoStoreDestination.Offers.route,
+            selected = currentRoute == CoGoStoreDestination.Offers.name,
             onClick = { navigateToOffers(); closeDrawer() },
             modifier = drawerItemModifier
         )
         NavigationDrawerItem(
             label = { Text(stringResource(CoGoStoreDestination.Help.title)) },
-            selected = currentRoute == CoGoStoreDestination.Help.route,
+            selected = currentRoute == CoGoStoreDestination.Help.name,
             onClick = { navigateToHelp(); closeDrawer() },
             modifier = drawerItemModifier
         )
         NavigationDrawerItem(
             label = { Text(stringResource(CoGoStoreDestination.TermsAndPolicy.title)) },
-            selected = currentRoute == CoGoStoreDestination.TermsAndPolicy.route,
+            selected = currentRoute == CoGoStoreDestination.TermsAndPolicy.name,
             onClick = { navigateToTermsAndPolicy(); closeDrawer() },
             modifier = drawerItemModifier
         )

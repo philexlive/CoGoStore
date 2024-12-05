@@ -16,30 +16,30 @@ import com.philexliveprojects.cogostore.ui.compose.wishlist.WishlistScreen
 fun CoGoStoreNavGraph(
     navController: NavHostController = rememberNavController(),
     openDrawer: () -> Unit = {},
-    startDestination: String = CoGoStoreDestination.Home.route
+    startDestination: String = CoGoStoreDestination.Home.name
 ) {
     NavHost(navController = navController, startDestination = startDestination) {
-        composable(CoGoStoreDestination.Home.route) {
+        composable(CoGoStoreDestination.Home.name) {
             HomeScreen(openDrawer)
         }
 
-        composable(CoGoStoreDestination.Wishlist.route) {
+        composable(CoGoStoreDestination.Wishlist.name) {
             WishlistScreen(onBack = { navController.navigateUp() })
         }
 
-        composable(CoGoStoreDestination.Bag.route) {
+        composable(CoGoStoreDestination.Bag.name) {
             BagScreen(onBack = { navController.navigateUp() })
         }
 
-        composable(CoGoStoreDestination.Offers.route) {
+        composable(CoGoStoreDestination.Offers.name) {
             OffersScreen(onBack = { navController.navigateUp() })
         }
 
-        composable(CoGoStoreDestination.Help.route) {
+        composable(CoGoStoreDestination.Help.name) {
             HelpScreen(onBack = { navController.navigateUp() })
         }
 
-        composable(CoGoStoreDestination.TermsAndPolicy.route) {
+        composable(CoGoStoreDestination.TermsAndPolicy.name) {
             TermsAndPolicyScreen(onBack = { navController.navigateUp() })
         }
     }
