@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CoGoStore</string>
+    <string name="app_name">CoGo Store</string>
     <string name="menu">Menu</string>
     <string name="home">Home</string>
     <string name="wishlist">Wishlist</string>
@@ -9,4 +9,9 @@
     <string name="terms_and_policy"><![CDATA[Terms & Policy]]></string>
     <string name="login">Login</string>
     <string name="back_to_home">Back To Home</string>
+
+    <!--Product names-->
+    <string name="hoodie">Hoody</string>
+    <string name="jacket">Jacket</string>
+    <string name="t_shirt">T-Shirt</string>
 </resources>
